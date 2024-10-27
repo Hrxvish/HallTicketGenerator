@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Ticket Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hall Ticket Generator</h1>
+        <form id="ticketForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll" name="roll" required><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required><br>
+
+            <button type="submit">Generate Ticket</button>
+        </form>
+
+        <div id="ticket" style="display:none;">
+            <h2>Hall Ticket</h2>
+            <p>Name: <span id="ticketName"></span></p>
+            <p>Roll Number: <span id="ticketRoll"></span></p>
+            <p>Subject: <span id="ticketSubject"></span></p>
+            <img id="qrCode" alt="QR Code"><br>
+            <button id="downloadBtn">Download Ticket</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
