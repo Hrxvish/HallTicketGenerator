@@ -1,0 +1,17 @@
+document.getElementById('ticketForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch('save_ticket.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);  // Success message from PHP
+    })
+    .catch(error => console.error('Error:', error));
+
+    // Rest of the ticket generation code...
+});
